@@ -1,0 +1,41 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles/movies.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/account.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/socios.css' %}">
+</head>
+
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>Opciones de Cuenta</h2>
+        <ul>
+            <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
+            <li><a href="{% url 'partner_register' %}">Partner</a></li>
+            <li><a href="{% url 'add_consigner' %}">Add Cosigner</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        {% if peliculas_alquiladas %}
+        <h2>Peliculas Alquiladas</h2>
+        <ul class="peliculas-list">
+            {% for pelicula in peliculas_alquiladas %}
+            <li class="pelicula-card">
+                <a href="{% url 'movie_details' pelicula.id %}">
+                    <img src="{{ pelicula.imagen.url }}" alt="{{ pelicula.titulo }}" class="pelicula-image">
+                    <p class="pelicula-title">{{ pelicula.titulo }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No tienes películas alquiladas.</p>
+        {% endif %}
+    </main>
+</div>
+{% endblock %}

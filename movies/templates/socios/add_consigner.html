@@ -1,0 +1,36 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles/movies.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/account.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/socios.css' %}">
+</head>
+
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>Opciones de Cuenta</h2>
+        <ul>
+            <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
+            <li><a href="{% url 'partner_register' %}">Partner</a></li>
+            <li><a href="{% url 'add_consigner' %}">Add Cosigner</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <div class="container-p">
+            <h2>Agregar Codeudor</h2>
+            <form method="POST">
+                {% csrf_token %}
+                {{ codeudor_form.as_p }}
+                <button class="bt" type="submit">Add Consigner</button>
+                {{error}}
+                {{ message }}
+            </form>
+        </div>
+    </main>
+</div>
+{% endblock %}

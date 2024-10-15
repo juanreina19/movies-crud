@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles/account.css' %}">
+</head>
+
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>Opciones de Cuenta</h2>
+        <ul>
+            <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
+            <li><a href="{% url 'partner_register' %}">Partner</a></li>
+            <li><a href="{% url 'add_consigner' %}">Add Cosigner</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <h1>Gestión de Cuenta</h1>
+        <p>Selecciona una opción en el menú de la izquierda para empezar.</p>
+        <!-- Aquí puedes agregar más contenido según la opción seleccionada -->
+    </main>
+</div>
+
+{% endblock %}

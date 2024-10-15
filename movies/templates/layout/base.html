@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/toggle.css' %}">
+    <link rel="icon" href="{% static 'img/icon2.png' %}">
+    <title>Glob Gusters</title>
+</head>
+
+<body id="container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{% static 'img/icon1.png' %}">
+            <h1>GLOB GUSTERS</h1>
+        </div>
+        <div class="menu-icon">&#9776;</div> <!-- Icono de menú estilo hamburguesa -->
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'movies' %}">Movies</a>
+            </li>
+            <li>
+                <a href="{% url 'account' %}" class="account-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'signup' %}">Signup</a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <label class="ui-switch">
+        <input type="checkbox" id="toggleButton">
+        <div class="slider">
+            <div class="circle"></div>
+        </div>
+    </label>
+    <script src="{% static 'funcion/script.js' %}"></script>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>© 2024 r/juan, All rights reserved</footer>
+</body>
+
+</html>

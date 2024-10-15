@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<article class="form">
+    <h1>Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <p>You don't have an account? <a href="{% url 'signup' %}">Register</a></p>
+        <button class="bt">
+            Login
+        </button>
+    </form>
+    <p class="error">{{ error }}</p>
+</article>
+
+
+{% endblock %}

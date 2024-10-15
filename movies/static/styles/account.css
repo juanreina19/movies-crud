@@ -1,0 +1,88 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    /* Fuente general */
+    margin: 0;
+    /* Sin márgenes */
+    padding: 0;
+    /* Sin padding */
+
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    /* Usar flexbox para disposición */
+    max-width: 1200px;
+    /* Ancho máximo */
+    margin: 20px auto;
+    /* Centrando el contenedor */
+}
+
+/* Estilo del sidebar */
+.sidebar {
+    width: 250px;
+    /* Ancho fijo */
+    border: 1px solid #ddd;
+    /* Borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.sidebar h2 {
+    margin: 0 0 20px;
+    /* Margen en el título */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    /* Sin viñetas */
+    padding: 0;
+    /* Sin padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    /* Espaciado entre las opciones */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    /* Sin subrayado */
+    display: block;
+    /* Mostrar como bloque */
+    padding: 10px;
+    /* Espaciado interno */
+    border-radius: 4px;
+    /* Bordes redondeados */
+}
+
+.sidebar ul li a:hover {
+    background-color: #f0f0f0;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    flex: 1;
+    /* Tomar el resto del espacio */
+    padding: 20px;
+    /* Espaciado interno */
+    border: 1px solid #ddd;
+    /* Borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin-left: 20px;
+    /* Margen a la izquierda para separación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.main-content h1 {
+    margin-top: 0;
+    /* Sin margen superior */
+}

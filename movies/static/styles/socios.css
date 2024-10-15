@@ -1,0 +1,68 @@
+.container-p {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo general para la lista de películas */
+.peliculas-list {
+    display: flex;
+    /* Usar flexbox para alinear las cards */
+    flex-wrap: wrap;
+    /* Permitir que las cards se envuelvan en varias filas */
+    justify-content: center;
+    /* Centrar las cards horizontalmente */
+    list-style-type: none;
+    /* Eliminar el estilo de lista */
+    padding: 0;
+    /* Sin padding en la lista */
+    margin: 20px 0;
+    /* Margen superior e inferior */
+}
+
+/* Estilo de cada card */
+.pelicula-card {
+    background-color: #fff;
+    /* Color de fondo de la card */
+    border: 1px solid #ccc;
+    /* Borde de la card */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    margin: 10px;
+    /* Margen entre las cards */
+    padding: 10px;
+    /* Relleno interno de la card */
+    text-align: center;
+    /* Centrar el texto dentro de la card */
+    width: 150px;
+    /* Ancho fijo para cada card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidad */
+    transition: transform 0.2s;
+    /* Transición para efecto hover */
+}
+
+/* Efecto hover para las cards */
+.pelicula-card:hover {
+    transform: scale(1.05);
+    /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+/* Estilo de la imagen de la película */
+.pelicula-image {
+    width: 100%;
+    /* Imagen ocupa el 100% del ancho de la card */
+    height: auto;
+    /* Mantener proporciones de la imagen */
+    border-radius: 5px;
+    /* Bordes redondeados para la imagen */
+}
+
+/* Estilo del título de la película */
+.pelicula-title {
+    margin-top: 10px;
+    /* Margen superior */
+    font-size: 14px;
+    /* Tamaño de fuente para el título */
+    color: #333;
+    /* Color del texto del título */
+}

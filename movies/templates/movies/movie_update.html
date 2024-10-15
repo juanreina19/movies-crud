@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<article class="form">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="bt">
+            Update
+        </button>
+    </form>
+    <form action="{% url 'delete_movie' movie.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button class="bt bt-red">
+            Delete
+        </button>
+        <p class="error">{{ error }}</p>
+    </form>
+</article>
+
+{% endblock %}

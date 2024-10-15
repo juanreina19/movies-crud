@@ -1,0 +1,205 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Permitir que los contenedores se reorganicen en pantallas pequeñas */
+}
+
+/* Contenedores internos */
+.left-container,
+.right-container {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contenedor central */
+.center-container {
+    padding: 20px;
+    background-color: rgba(173, 216, 230, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    text-align: left;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Imagenes en left-container */
+.left-container img {
+    border-radius: 7px;
+}
+
+.left-container h3,
+p {
+    margin: 7px;
+}
+
+/* Back button */
+.bt-back {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+
+.bt-back>svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+.bt-back:hover>svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+.bt-back:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Botón de carrito */
+.cartBtn {
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cart {
+    z-index: 2;
+}
+
+.cartBtn:active {
+    transform: scale(0.96);
+}
+
+.product {
+    position: absolute;
+    width: 12px;
+    border-radius: 3px;
+    content: "";
+    left: 23px;
+    bottom: 23px;
+    opacity: 0;
+    z-index: 1;
+    fill: rgb(211, 211, 211);
+}
+
+.cartBtn:hover .product {
+    animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) rotate(-90deg);
+        opacity: 1;
+    }
+}
+
+.cartBtn:hover .cart {
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Reglas de responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Apilar los contenedores verticalmente en pantallas pequeñas */
+        align-items: center;
+        /* Centrar los contenedores en la pantalla */
+    }
+
+    .left-container,
+    .right-container,
+    .center-container {
+        margin: 10px 0;
+        /* Espaciado vertical entre los contenedores */
+        width: 100%;
+        /* Asegurar que ocupen el 100% del ancho en pantallas pequeñas */
+    }
+
+    .center-container {
+        padding: 15px;
+        /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .bt-back {
+        width: 80px;
+        /* Ajustar el tamaño del botón de regreso */
+        height: 2.5em;
+    }
+
+    .cartBtn {
+        width: 130px;
+        /* Reducir el tamaño del botón de carrito */
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bt-back {
+        width: 70px;
+        /* Ajustar aún más el tamaño del botón en pantallas muy pequeñas */
+        height: 2.3em;
+    }
+
+    .cartBtn {
+        width: 120px;
+        /* Reducir aún más el tamaño del botón en pantallas muy pequeñas */
+        height: 40px;
+    }
+}

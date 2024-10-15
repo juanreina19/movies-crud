@@ -1,0 +1,297 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: whitesmoke;
+    background: rgba(128, 0, 255, 0.07);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 75%;
+    margin: auto;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container ul li a:hover {
+    color: #2041ff;
+}
+
+.form {
+    font-family: system-ui;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    width: 80%;
+    max-width: 1000px;
+    min-width: 300px;
+    min-height: 400px;
+    box-sizing: border-box;
+    transition: .4s ease-in-out;
+}
+
+.bt {
+    display: flex;
+    border: 2px solid #3385ff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px auto;
+    transition-duration: 0.4s;
+    background-color: #3385ff;
+    color: white;
+    box-sizing: border-box;
+}
+
+.bt:hover {
+    background-color: #2041ff;
+}
+
+.bt-red {
+    background-color: #f14444;
+    border: 2px solid #f14444;
+}
+
+.bt-red:hover {
+    background-color: red;
+}
+
+.error {
+    color: #f14444;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 60%;
+    padding: 1em;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+input:focus {
+    background-color: white;
+    transform: scale(1.03);
+    box-shadow: 13px 13px 100px #858585, -13px -13px 100px #ffffff;
+}
+
+/* styles.css */
+.select-input {
+    width: 40%;
+    /* Ancho completo */
+    padding: 10px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Borde gris */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    background-color: white;
+    /* Color de fondo */
+    transition: border-color 0.3s;
+    /* Transición para el borde */
+}
+
+/* Cambiar borde al tener el foco */
+.select-input:focus {
+    border-color: #007bff;
+    /* Color de borde al tener foco */
+    outline: none;
+    /* Sin contorno */
+}
+
+/* Estilo del menú desplegable */
+.select-input option {
+    padding: 10px;
+    /* Espaciado interno para opciones */
+}
+
+/* Estilo del menú desplegable en el hover */
+.select-input option:hover {
+    background-color: #f0f0f0;
+    /* Color de fondo al pasar el mouse */
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card ul li {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    background-color: white;
+    transition: transform 0.2s;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+.card ul li:hover {
+    transform: scale(1.05);
+}
+
+.card ul li img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.card ul li a:hover {
+    color: #3385ff;
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+
+.org {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    display: flex;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+.input:hover {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.title {
+    color: #be58d7;
+}
+
+.center {
+    text-align: center;
+    margin: 5px auto;
+}
+
+.movie-t {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .form {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .bt {
+        font-size: 14px;
+    }
+
+    .input {
+        width: 100%;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .form {
+        width: 95%;
+        min-width: 280px;
+    }
+
+    .bt {
+        font-size: 12px;
+    }
+
+    .input {
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    .card ul li {
+        width: 150px;
+    }
+}

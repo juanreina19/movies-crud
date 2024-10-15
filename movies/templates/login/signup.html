@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<article class="form">
+    <h1>Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="text">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <label for="password">Password:</label>
+        <input type="password" name="password1" id="password1" placeholder="Password">
+        <label for="password">Repeat password:</label>
+        <input type="password" name="password2" id="password2" placeholder="Confirm password">
+        <p>
+            <a href="{% url 'login' %}">I have an account</a>
+        </p>
+        <button class="bt">
+            Signup
+        </button>
+    </form>
+    <p class="error">{{ error }}</p>
+</article>
+
+
+{% endblock %}

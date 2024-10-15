@@ -1,0 +1,118 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos del menú */
+nav {
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: whitesmoke;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 65px;
+    width: auto;
+    margin-right: 10px;
+}
+
+nav .logo h1 {
+    font-size: 1.4rem;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b927fc;
+}
+
+nav ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Ocultar el menú hamburguesa en pantallas grandes */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Mostrar el menú hamburguesa solo en pantallas pequeñas (máximo 768px) */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar el menú completo por defecto en pantallas pequeñas */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        /* Posicionarlo relativo al nav */
+        top: 60px;
+        /* Ajusta según la altura de tu nav o logo */
+        right: 0;
+        width: 100%;
+        background-color: whitesmoke;
+        padding: 10px;
+        z-index: 1000;
+        /* Para asegurarse que quede encima de otros elementos */
+    }
+
+    /* Mostrar el menú cuando se haga clic en el ícono */
+    nav.show ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        width: 100%;
+    }
+}

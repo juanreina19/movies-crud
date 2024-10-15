@@ -1,0 +1,109 @@
+.container-r {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* Borde alrededor de la factura */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    max-width: 800px;
+    /* Ancho máximo del contenedor */
+    width: 100%;
+    /* Asegura que ocupe el 100% hasta el máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidad */
+    margin: 0 auto;
+}
+
+/* Estilo del formulario */
+.form-container {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    padding: 20px;
+    margin-right: 20px;
+    /* Espacio a la derecha para la imagen */
+    border: 1px solid #ccc;
+    /* Borde alrededor del formulario */
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+/* Título de la factura */
+.factura-title {
+    font-size: 24px;
+    /* Tamaño de la fuente */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+}
+
+/* Detalles de la factura */
+.factura-details {
+    margin-bottom: 20px;
+    /* Espacio inferior */
+}
+
+/* Botón de confirmación */
+.confirm-button {
+    background-color: #2996fc;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    padding: 10px 15px;
+    /* Relleno interno */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor de mano al pasar sobre el botón */
+    width: 100%;
+    /* Botón ocupa el 100% del ancho */
+}
+
+.confirm-button:hover {
+    background-color: #517ffd;
+    /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo del contenedor de la imagen */
+.image-button-container {
+    width: 250px;
+    /* Ancho fijo para la imagen */
+}
+
+/* Estilo del card de imagen */
+.image-card {
+    border: 1px solid #ccc;
+    /* Borde alrededor de la imagen */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Ocultar desbordamiento */
+    text-align: center;
+    /* Centrar texto */
+}
+
+.image-card img {
+    width: 100%;
+    /* Imagen ocupa el 100% del ancho del card */
+    height: auto;
+    /* Mantener proporciones */
+}
+
+.image-card h3 {
+    padding: 10px;
+    /* Relleno interno */
+    margin: 0;
+    /* Sin margen */
+}
+
+/* Estilos de error y alerta */
+.error {
+    color: red;
+    /* Color del texto de error */
+}
+
+.alert {
+    color: orange;
+    /* Color de advertencia */
+}
