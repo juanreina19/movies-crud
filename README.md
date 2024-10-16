@@ -2,11 +2,11 @@ Aquí tienes una estructura sugerida para tu README, junto con detalles que pued
 
 ---
 
-# Alquiler de Películas
+# Alquiler de Películas - GLOB GUSTERS
 
 ## Enlace a la Aplicación
 
-Puedes visitar la aplicación en el siguiente enlace: [Alquiler de Películas](https://movies-crud-iivw.onrender.com/movies/)
+Puedes visitar la aplicación en el siguiente enlace: [GLOB GUSTERS WEB](https://movies-crud-iivw.onrender.com/)
 
 ## Descripción
 
