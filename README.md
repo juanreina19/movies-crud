@@ -101,9 +101,4 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 Puedes visitar la aplicación en el siguiente enlace: [Alquiler de Películas](https://movies-crud-iivw.onrender.com/movies/)
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
 
