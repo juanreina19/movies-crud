@@ -19,4 +19,7 @@ urlpatterns = [
     path('account/', views.account, name='account'),
     path('account/rented/movies/', views.movies_rented, name='rented_movies'),
     path('account/add/consigner/', views.add_consigner, name='add_consigner')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
