@@ -17,6 +17,9 @@ class Actores(models.Model):
     
     def __str__(self):
         return f'{self.nombre}'
+    class Meta:
+        
+        db_table = 'actores'
 
 
 class Alquiler(models.Model):
@@ -27,6 +30,9 @@ class Alquiler(models.Model):
     as_delivered = models.IntegerField(blank=True, null=True)
     id_socio = models.ForeignKey('Socio', models.DO_NOTHING, db_column='Id_socio', blank=True, null=True)  # Field name made lowercase.
 
+    class Meta:
+        
+        db_table = 'alquiler'
 
 
 class AuthGroup(models.Model):
@@ -103,6 +109,9 @@ class Codeudor(models.Model):
     id_socio = models.ForeignKey('Socio', models.DO_NOTHING, db_column='Id_socio', blank=True, null=True)  # Field name made lowercase.
     id_codeudor = models.ForeignKey('Socio', models.DO_NOTHING, db_column='Id_Codeudor', related_name='codeudor_id_codeudor_set', blank=True, null=True)  # Field name made lowercase.
 
+    class Meta:
+    
+        db_table = 'codeudor'
     
     def __str__(self):
         return f'{self.id_codeudor}'
@@ -116,6 +125,8 @@ class Director(models.Model):
     def __str__(self):
         return self.nombre.capitalize()
 
+    class Meta:
+        db_table = 'director'
 
 
 class DjangoAdminLog(models.Model):
@@ -168,6 +179,9 @@ class Ejemplar(models.Model):
     estado_conservacion = models.CharField(db_column='Estado_conservacion', max_length=255, blank=True, null=True)  # Field name made lowercase.
     id_pelicula = models.ForeignKey('Pelicula', models.DO_NOTHING, db_column='Id_Pelicula', blank=True, null=True)  # Field name made lowercase.
 
+    class Meta:
+        db_table = 'ejemplar'
+
     def __str__(self):
         return  f'{self.id_pelicula}'
 
@@ -187,6 +201,8 @@ class Pelicula(models.Model):
         self.imagen.storage.delete(self.imagen.name)
         super().delete()
     
+    class Meta:
+        db_table = 'pelicula'
 
 
 class Reparto(models.Model):
@@ -196,6 +212,9 @@ class Reparto(models.Model):
 
     def __str__(self):
         return f'{self.id_pelicula} - {self.id_actores}'
+    
+    class Meta:
+        db_table = 'reparto'
 
 
 class Socio(models.Model):
@@ -205,6 +224,10 @@ class Socio(models.Model):
     direccion = models.CharField(db_column='Direccion', max_length=255, blank=False, null=True)  # Field name made lowercase.
     telefono = models.CharField(db_column='Telefono', max_length=255, blank=False, null=True)  # Field name made lowercase.
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='socio', null=True, blank=True)
+
+    class Meta:
+
+        db_table = 'socio'
 
     def __str__(self):
         return f'{self.nombre}'
