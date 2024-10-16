@@ -4,6 +4,10 @@ Aquí tienes una estructura sugerida para tu README, junto con detalles que pued
 
 # Alquiler de Películas
 
+## Enlace a la Aplicación
+
+Puedes visitar la aplicación en el siguiente enlace: [Alquiler de Películas](https://movies-crud-iivw.onrender.com/movies/)
+
 ## Descripción
 
 Este proyecto es una plataforma de alquiler de películas donde los socios pueden registrarse, alquilar películas y agregar co-deudores. La aplicación permite gestionar una base de datos de películas y actores, ofreciendo una interfaz amigable para los usuarios.
@@ -59,12 +63,7 @@ Este proyecto es una plataforma de alquiler de películas donde los socios puede
    python manage.py migrate
    ```
 
-5. **Cargar datos iniciales** (si corresponde):
-   ```bash
-   python manage.py loaddata <nombre_de_archivo_json>
-   ```
-
-6. **Ejecutar el servidor**:
+5. **Ejecutar el servidor**:
    ```bash
    python manage.py runserver
    ```
@@ -97,8 +96,5 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
    ```
 4. Envía un pull request.
 
-## Enlace a la Aplicación
-
-Puedes visitar la aplicación en el siguiente enlace: [Alquiler de Películas](https://movies-crud-iivw.onrender.com/movies/)
 
 
