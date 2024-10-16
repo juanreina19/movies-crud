@@ -11,18 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Inicializar django-environ
-env = environ.Env()
-
-# Leer el archivo .env en desarrollo (solo si existe)
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -90,7 +82,7 @@ WSGI_APPLICATION = 'movies_crud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Esto guardará la base de datos SQLite en la raíz de tu proyecto.
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
