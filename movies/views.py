@@ -35,7 +35,7 @@ def movies_rented(request):
         })
         
     except Socio.DoesNotExist:
-        return render(request, 'movies/peliculas_alquiladas.html', {'error': 'Debes registrarte como socio para ver tus películas alquiladas.'})
+        return render(request, 'movies/rented_movies.html', {'error': 'Debes registrarte como socio para ver tus películas alquiladas.'})
 
 @login_required
 def movies(request): # Muestra la lista de peliculas
