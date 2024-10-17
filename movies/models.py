@@ -187,7 +187,7 @@ class Ejemplar(models.Model):
 
 class Pelicula(models.Model):
     id = models.AutoField(db_column='ID', primary_key=True)  # Field name made lowercase.
-    imagen = models.ImageField(upload_to='img/', blank=False, null=True)
+    imagen = models.ImageField(blank=False, null=True)
     titulo = models.CharField(db_column='Titulo', max_length=255, blank=False, null=True)  # Field name made lowercase.
     nacionalidad = models.CharField(db_column='Nacionalidad', max_length=255, blank=False, null=True)  # Field name made lowercase.
     productor = models.CharField(db_column='Productor', max_length=255, blank=False, null=True)  # Field name made lowercase.
