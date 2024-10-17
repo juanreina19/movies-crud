@@ -27,19 +27,20 @@
         {% elif error_disponibilidad %}
         <p class="error">{{ error_disponibilidad }}</p>
         {% elif codeudor_exists %}
-        <h2 class="factura-title">Confirmar Alquiler</h2>
+        <h2 class="factura-title">Confirm Rental</h2>
         <div class="factura-details">
-            <p><strong>Socio:</strong> {{ alquiler_preview.socio.nombre }}</p>
-            <p><strong>Ejemplar:</strong> {{ alquiler_preview.ejemplar.id }}</p>
-            <p><strong>Fecha de Alquiler:</strong> {{ alquiler_preview.fecha_alquiler }}</p>
-            <p><strong>Fecha de Devolución:</strong> {{ alquiler_preview.fecha_devolucion }}</p>
+            <p><strong>Partner:</strong> {{ alquiler_preview.socio.nombre }}</p>
+            <p><strong>Copy:</strong> {{ alquiler_preview.ejemplar.id }}</p>
+            <p><strong>Status:</strong> {{ alquiler_preview.ejemplar.estado_conservacion }}</p>
+            <p><strong>Rental Date:</strong> {{ alquiler_preview.fecha_alquiler }}</p>
+            <p><strong>Return Date:</strong> {{ alquiler_preview.fecha_devolucion }}</p>
         </div>
 
         <!-- Formulario para confirmar el alquiler -->
         {{ alquiler_form.as_p }}
-        <button type="submit" name="confirm" class="confirm-button">Alquilar película</button>
+        <button type="submit" name="confirm" class="confirm-button">Rent movie</button>
         {% else %}
-        <p class="alert">Necesitas un codeudor registrado para alquilar esta película.</p>
+        <p class="alert">You need a registered co-signer to rent this movie.</p>
         {% endif %}
     </form>
     {% if codeudor_exists %}

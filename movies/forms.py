@@ -20,7 +20,7 @@ class CodeudorForm(ModelForm):
     class Meta:
         model = Codeudor
         fields = ['id_codeudor']
-        labels = {'id_codeudor': 'Codeudor'}
+        labels = {'id_codeudor': 'Cosigner'}
         widgets = {'id_codeudor': forms.Select(attrs={'class': 'select-input'})}
 
     def __init__(self, *args, **kwargs):

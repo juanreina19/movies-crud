@@ -99,9 +99,9 @@ def rent_movie(request, movie_id):
         socio = Socio.objects.get(user=request.user)
         movie = Pelicula.objects.get(id=movie_id)
     except Socio.DoesNotExist:
-        return render(request, 'movies/rent_movie.html', {'error_socio': 'Debes registrarte como socio para alquilar una película.'})
+        return render(request, 'movies/rent_movie.html', {'error_socio': 'You must register as a partner to rent a movie.'})
     except Pelicula.DoesNotExist:
-        return render(request, 'movies/rent_movie.html', {'error_pelicula': 'Película no encontrada.'})
+        return render(request, 'movies/rent_movie.html', {'error_pelicula': 'Movie not found.'})
 
     # Verificar si el socio tiene un codeudor
     codeudor_exists = Codeudor.objects.filter(id_socio=socio).exists()
@@ -110,7 +110,7 @@ def rent_movie(request, movie_id):
     id__in=Alquiler.objects.filter(as_delivered__isnull=True).values_list('id_ejemplar', flat=True)).first()
 
     if not ejemplar_disponible:
-        return render(request, 'movies/rent_movie.html', {'error_disponibilidad': 'No hay ejemplares disponibles para alquilar.'})
+        return render(request, 'movies/rent_movie.html', {'error_disponibilidad': 'There are no copies available for rent.'})
 
     if request.method == 'POST':
         alquiler_form = AlquilerForm(request.POST)

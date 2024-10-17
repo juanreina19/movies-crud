@@ -12,7 +12,7 @@
 
 <div class="container">
     <aside class="sidebar">
-        <h2>Opciones de Cuenta</h2>
+        <h2>Account Options</h2>
         <ul>
             <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
             <li><a href="{% url 'partner_register' %}">Partner</a></li>
@@ -23,10 +23,10 @@
     <main class="main-content">
         <div class="container-p">
             {% if is_partner %}
-            <p>Ya eres socio</p>
+            <p>You are already a partner</p>
             {% else %}
-            <h1>¿Quieres registrarte como socio?</h1>
-            <h3>Completa el siguiente formulario!</h3>
+            <h1>Do you want to register as a partner?</h1>
+            <h3>Complete the following form!</h3>
             <form class="form" method="POST">
                 {% csrf_token %}
                 {{ socio_form.as_p }}

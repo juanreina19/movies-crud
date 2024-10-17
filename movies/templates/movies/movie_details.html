@@ -24,7 +24,7 @@
         <p>{{ movie.fecha }}</p>
     </div>
     <div class="center-container">
-        <h3>Reparto</h3>
+        <h3>Cast</h3>
         <p>
             {% for movie in movies %}
             {{ movie.id_actores.nombre }}{% if not forloop.last %},{% else %}.{% endif %}

@@ -12,7 +12,7 @@
 
 <div class="container">
     <aside class="sidebar">
-        <h2>Opciones de Cuenta</h2>
+        <h2>Account Options</h2>
         <ul>
             <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
             <li><a href="{% url 'partner_register' %}">Partner</a></li>
@@ -35,7 +35,7 @@
             {% endfor %}
         </ul>
         {% else %}
-        <p>No tienes películas alquiladas.</p>
+        <p>You don't have rented movies.</p>
         {% endif %}
     </main>
 </div>

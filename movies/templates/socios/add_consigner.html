@@ -12,7 +12,7 @@
 
 <div class="container">
     <aside class="sidebar">
-        <h2>Opciones de Cuenta</h2>
+        <h2>Account Options</h2>
         <ul>
             <li><a href="{% url 'rented_movies' %}">Rented Movies</a></li>
             <li><a href="{% url 'partner_register' %}">Partner</a></li>
@@ -22,13 +22,16 @@
     </aside>
     <main class="main-content">
         <div class="container-p">
-            <h2>Agregar Codeudor</h2>
+            <h2>Add Cosigner</h2>
             <form method="POST">
                 {% csrf_token %}
-                {{ codeudor_form.as_p }}
-                <button class="bt" type="submit">Add Consigner</button>
+                {% if error %}
                 {{error}}
+                {% else %}
+                {{ codeudor_form.as_p }}
+                <button class="bt" type="submit">Add</button>
                 {{ message }}
+                {% endif %}
             </form>
         </div>
     </main>
