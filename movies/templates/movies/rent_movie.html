@@ -45,7 +45,7 @@
     {% if codeudor_exists %}
     <div class="image-button-container">
         <div class="image-card">
-            <img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}">
+            <img src="{% static 'img/' %}{{ movie.imagen }}" alt="{{ movie.titulo }}">
             <h3>{{ movie.titulo }}</h3>
         </div>
     </div>

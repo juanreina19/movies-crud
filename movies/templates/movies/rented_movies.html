@@ -27,7 +27,7 @@
             {% for pelicula in peliculas_alquiladas %}
             <li class="pelicula-card">
                 <a href="{% url 'movie_details' pelicula.id %}">
-                    <img src="{{ pelicula.imagen.url }}" alt="{{ pelicula.titulo }}" class="pelicula-image">
+                    <img src="{% static 'img/' %}{{ movie.imagen }}" alt="{{ pelicula.titulo }}" class="pelicula-image">
                     <p class="pelicula-title">{{ pelicula.titulo }}</p>
                 </a>
             </li>

@@ -48,7 +48,7 @@
         {% for movie in directores %}
         <li>
             <a href="{% url 'movie_details' movie.id %}">
-                <img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}" height="100">
+                <img src="{% static 'img/' %}{{ movie.imagen }}" alt="{{ movie.titulo }}" height="100">
             </a>
             <a href="{% url 'movie_details' movie.id %}">{{movie.titulo}}</a>
         </li>

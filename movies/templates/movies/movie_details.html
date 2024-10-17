@@ -19,7 +19,7 @@
 </form>
 <main class="container">
     <div class="left-container">
-        <img src="{{ movie.imagen.url }}" alt="{{ movie.titulo }}" height="350">
+        <img src="{% static 'img/' %}{{ movie.imagen }}" alt="{{ movie.titulo }}" height="350">
         <h3>{{ movie }}</h3>
         <p>{{ movie.fecha }}</p>
     </div>
