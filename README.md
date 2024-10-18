@@ -20,7 +20,7 @@ Este proyecto es una plataforma de alquiler de películas donde los socios puede
 ## Enlace a la Aplicación
 
 Puedes visitar la aplicación en el siguiente enlace: [GLOB GUSTERS WEB](https://movies-crud-iivw.onrender.com/)
-Note: Si la pagina no carga, espera al menos 40 segundos y dale f5.
+- `Note: Si la pagina no carga, espera al menos 40 segundos y dale f5.`
 
 ## Características
 
