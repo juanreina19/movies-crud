@@ -2,10 +2,6 @@
 
 # Alquiler de Películas - GLOB GUSTERS
 
-## Enlace a la Aplicación
-
-Puedes visitar la aplicación en el siguiente enlace: [GLOB GUSTERS WEB](https://movies-crud-iivw.onrender.com/)
-
 ## Descripción
 
 Este proyecto es una plataforma de alquiler de películas donde los socios pueden registrarse, alquilar películas y agregar co-deudores. La aplicación permite gestionar una base de datos de películas y actores, ofreciendo una interfaz amigable para los usuarios.
@@ -20,6 +16,11 @@ Este proyecto es una plataforma de alquiler de películas donde los socios puede
 - [Contribuciones](#contribuciones)
 - [Enlace a la Aplicación](#enlace-a-la-aplicación)
 - [Licencia](#licencia)
+
+## Enlace a la Aplicación
+
+Puedes visitar la aplicación en el siguiente enlace: [GLOB GUSTERS WEB](https://movies-crud-iivw.onrender.com/)
+Note: Si la pagina no carga, espera al menos 40 segundos y dale f5.
 
 ## Características
 
