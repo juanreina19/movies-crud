@@ -1,5 +1,3 @@
-Aquí tienes una estructura sugerida para tu README, junto con detalles que puedes incluir para que sea informativo y útil para los usuarios y desarrolladores:
-
 ---
 
 # Alquiler de Películas - GLOB GUSTERS
