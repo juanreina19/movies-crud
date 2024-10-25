@@ -8,14 +8,12 @@ Este proyecto es una plataforma de alquiler de películas donde los socios puede
 
 ## Tabla de Contenidos
 
+- [Enlace a la Aplicación](#enlace-a-la-aplicación)
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Funcionalidades](#funcionalidades)
-- [Contribuciones](#contribuciones)
-- [Enlace a la Aplicación](#enlace-a-la-aplicación)
-- [Licencia](#licencia)
 
 ## Enlace a la Aplicación
 
@@ -80,20 +78,6 @@ Puedes visitar la aplicación en el siguiente enlace: [GLOB GUSTERS WEB](https:/
 - **Alquiler**: Los socios pueden alquilar películas disponibles en la plataforma.
 - **Co-deudores**: Los usuarios pueden agregar co-deudores para gestionar los alquileres de manera conjunta.
 
-## Contribuciones
-
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama:
-   ```bash
-   git checkout -b nombre_de_rama
-   ```
-3. Realiza tus cambios y haz commit:
-   ```bash
-   git commit -m 'Descripción de los cambios'
-   ```
-4. Envía un pull request.
 
 
 
